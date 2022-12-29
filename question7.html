@@ -1,0 +1,65 @@
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="js/shuffle.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/pause_video.js"></script>
+    <script src="https://youtube.com/iframe_api"></script>
+</head>
+
+<body>
+    <script>
+        const TITLE = "Седьмой вопрос";
+        const VIDEO_ID = "s-xc-nL_llM";
+
+        const TEXT = "Почему застрял Винни Пух?";
+        const ANSWERS = [
+            "Кто-то слишком много ест",
+            "У кого-то слишком узкие двери",
+            "Кто-то слишком любит мед",
+        ];
+        const CORRECT = 0;
+
+        const START_AT = 530;
+        const PAUSE_AT = 541;
+        const END_AT = 560;
+
+        const NEXT_QUESTION = "question8.html";
+    </script>
+    <main>
+        <div class="px-4 my-3 text-center">
+            <h1 id="title" class="display-5 fw-bold"></h1>
+            <div class="my-3">
+                <div id="ytplayer"></div>
+            </div>
+            <h2 id="question" class="display-6 fw"></h2>
+            <div id="buttons" hidden class="container my-3" style="max-width: 640;">
+                <div class="row row-cols-1 gy-2 justify-content-center">
+                    <div class="col">
+                        <button id="answer-0" type="button"
+                            class="btn btn-secondary p-3 w-100 h-100 fw-bold"></button>
+                    </div>
+                    <div class="col">
+                        <button id="answer-1" type="button"
+                            class="btn btn-secondary p-3 w-100 h-100 fw-bold"></button>
+                    </div>
+                    <div class="col">
+                        <button id="answer-2" type="button"
+                            class="btn btn-secondary p-3 w-100 h-100 fw-bold"></button>
+                    </div>
+                    <div class="col">
+                        <button id="control" type="button" class="btn btn-primary p-3 w-100 h-100 fw-bold">Следующий вопрос</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
